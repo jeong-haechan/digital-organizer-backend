@@ -21,6 +21,7 @@ SCOPES = [
     'https://www.googleapis.com/auth/userinfo.profile'
 ]
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+os.environ['OAUTHLIB_RELAX_TOKEN_SCOPE'] = '1'
 
 # 1. 포함할 키워드 (가입 시그널)
 KEYWORDS = ['가입', '환영', 'welcome', 'verify', 'confirm', '인증', '구독', 'registration', 'account', 'created', 'started']
