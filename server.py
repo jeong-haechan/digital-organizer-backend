@@ -11,7 +11,7 @@ from deep_translator import GoogleTranslator
 
 app = Flask(__name__)
 app.secret_key = 'digital_organizer_secret'
-CORS(app, supports_credentials=True)
+CORS(app, supports_credentials=True, origins=["https://digital-organizer-frontend.vercel.app"])
 
 CLIENT_SECRETS_FILE = "credentials.json"
 SCOPES = [
@@ -140,7 +140,7 @@ def callback():
         'picture': user_info.get('picture')
     }
     
-    return redirect('http://localhost:3000?auth=success')
+    return redirect('https://digital-organizer-frontend.vercel.app?auth=success')
 
 @app.route('/logout')
 def logout():
