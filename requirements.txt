@@ -1,0 +1,7 @@
+flask
+flask-cors
+google-auth-oauthlib
+google-auth
+google-api-python-client
+requests
+deep-translator
