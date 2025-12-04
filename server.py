@@ -10,6 +10,8 @@ from googleapiclient.discovery import build
 from deep_translator import GoogleTranslator
 
 app = Flask(__name__)
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+app.config['SESSION_COOKIE_SECURE'] = True
 app.secret_key = 'digital_organizer_secret'
 CORS(app, supports_credentials=True, origins=["https://digital-organizer-frontend.vercel.app"])
 
